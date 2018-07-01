@@ -1,0 +1,5 @@
+{
+  "AttributeName": "FilterPolicy",
+  "SubscriptionArn":"TODO ARN",
+  "AttributeValue":"todo some json?"
+}
