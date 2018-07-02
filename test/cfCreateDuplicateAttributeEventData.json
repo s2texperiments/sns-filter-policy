@@ -7,9 +7,17 @@
   "LogicalResourceId": "s2tTrackAllS3",
   "ResourceType": "AWS::CloudFormation::CustomResource",
   "ResourceProperties": {
-    "ServiceToken": "arn:aws:lambda:eu-west-1:099687127161:function:s2t-base-snsFilterPolicy-NVGOLL6H0BOT"
-  },
-  "OldResourceProperties": {
-    "ServiceToken": "arn:aws:lambda:eu-west-1:099687127161:function:s2t-base-snsFilterPolicy-NVGOLL6H0BOT"
+    "ServiceToken": "arn:aws:lambda:eu-west-1:099687127161:function:s2t-test1-snsFilterPolicy-YMU3MU7OD3B7",
+    "FilterPolicy": [
+      {
+        "Policy": "[\"rugby\"]",
+        "Attribute": "customer_interests"
+      },
+      {
+        "Policy": "[{\"anything-but\":\"rugby\"}]",
+        "Attribute": "customer_interests"
+      }
+    ],
+    "SubscriptionArn": "s2t-test1-s2tTestSubscription-1N1A78OS39O5L"
   }
 }
