@@ -150,8 +150,14 @@ describe('sns-filter-policy', () => {
             expectByPass(event, context, {givenEventData});
 
             let [snsSubAttribute] = snsSetSubscriptionAttributesFake.firstCall.args;
-            expect(snsSubAttribute).to.deep.equal(getExpectedResult('expectedUpdateSubscriptionArnSnsSetSubscriptionAttributes.json'));
-            throw "delete old, create new";
+            expect(snsSubAttribute).to.deep.equal(getExpectedResult('expectedDeleteSnsSetSubscriptionAttributes.json'));
+
+            let [snsSubAttribute1] = snsSetSubscriptionAttributesFake.secondCall.args;
+            let expectedNewFilterPolicy = getExpectedResult('expectedUpdateFilterPolicySnsSetSubscriptionAttributes.json');
+            //with new subscription arn
+            expectedNewFilterPolicy.SubscriptionArn = 's2t-test1-s2tTestSubscription-XXX';
+            expect(snsSubAttribute1).to.deep.equal(expectedNewFilterPolicy);
+
         });
     });
 

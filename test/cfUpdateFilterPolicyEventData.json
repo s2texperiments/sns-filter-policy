@@ -1,5 +1,5 @@
 {
-  "RequestType": "Create",
+  "RequestType": "Update",
   "ServiceToken": "arn:aws:lambda:eu-west-1:099687127161:function:s2t-base-snsFilterPolicy-NVGOLL6H0BOT",
   "ResponseURL": "https://cloudformation-custom-resource-response-euwest1.s3-eu-west-1.amazonaws.com/responseurl",
   "StackId": "arn:aws:cloudformation:eu-west-1:099687127161:stack/s2t-base/3d992e90-691c-11e8-96cc-50faeb5cc8d2",
@@ -10,12 +10,8 @@
     "ServiceToken": "arn:aws:lambda:eu-west-1:099687127161:function:s2t-test1-snsFilterPolicy-YMU3MU7OD3B7",
     "FilterPolicy": [
       {
-        "Policy": "[\"rugby\"]",
+        "Policy": "[\"football\"]",
         "Attribute": "customer_interests"
-      },
-      {
-        "Policy": "[{\"numeric\":[\"=\",301.5]}]",
-        "Attribute": "price_usd"
       }
     ],
     "SubscriptionArn": "s2t-test1-s2tTestSubscription-1N1A78OS39O5L"
@@ -26,6 +22,10 @@
       {
         "Policy": "[\"basketball\"]",
         "Attribute": "customer_interests"
+      },
+      {
+        "Policy": "[{\"numeric\":[\"=\",301.5]}]",
+        "Attribute": "price_usd"
       }
     ],
     "SubscriptionArn": "s2t-test1-s2tTestSubscription-1N1A78OS39O5L"

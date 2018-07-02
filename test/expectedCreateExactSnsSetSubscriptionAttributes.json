@@ -1,5 +1,5 @@
 {
   "AttributeName": "FilterPolicy",
   "SubscriptionArn":"s2t-test1-s2tTestSubscription-1N1A78OS39O5L",
-  "AttributeValue":"todo some json?"
+  "AttributeValue":"{\"customer_interests\":[\"rugby\"],\"price_usd\":[{\"numeric\":[\"=\",301.5]}]}"
 }
