@@ -9,6 +9,10 @@ SubscriptionArn: The subscription which should the filter policy added to
 FilterPolicy: List of Attribute/Policy objects
 ```
 
+## Permission
+### Sns
+- ListSubscriptionsByTopic
+
 ##Example
 
 ```yaml
