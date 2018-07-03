@@ -18,7 +18,7 @@ SnsFilterPolicy:
     ServiceToken:
       !Sub |
         arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunctionName}
-    SubscriptionArn: Ref(Subscription)
+    SubscriptionArn: arn:to:subscription
     FilterPolicy:
       #Exact matching (whitelisting)
       - Attribute: customer_interests
